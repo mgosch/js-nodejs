@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;900&family=Raleway:wght@100;300;400;500;600;700;900&display=swap");
+
+/* Custom properties */
+:root {
+  --color-primario: #111111;
+  --color-secundario: #f0f0f0;
+
+  --color-enfasis: #ff3333;
+  --color-celeste: #1d84b5;
+
+  --color-fondo-oscuro: #30343f;
+  --color-fondo-claro: #f5f5f5;
+  --color-gris: #b9b9b9;
+  --color-negro: #000;
+
+  /* tipografia */
+  --font-principal: "Raleway", sans-serif;
+  --font-secundaria: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* reset de enlaces */
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+/* ... excepto las que se encuentran en parrafos */
+p a {
+  display: inline;
+}
+
+/* quitamos los puntos de los li */
+li {
+  list-style-type: none;
+}
+img,
+picture {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+header,
+section,
+footer {
+  padding: 0 1rem;
+}
+
+html {
+  scroll-behavior: smooth; /* anclas suaves */
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--font-principal);
+  color: var(--color-primario);
+  background-color: var(--color-fondo-claro);
+}
+.boton {
+  font-family: var(--font-secundaria);
+  font-size: 24px;
+  border-radius: 25px;
+}
+nav a {
+  color: var(--color-secundario);
+}
+nav a:hover {
+  color: var(--color-enfasis);
+  font-weight: 500;
+}
+
+/* header */
+header {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-secundario);
+  font-size: 20px;
+}
+header nav {
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+header picture {
+  width: 365px;
+}
+
+header .navegacion {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* banner */
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url('../img/funkos-banner.webp');
+  /* le puse un gradiente oscuro al fondo para que el texto sea mas legible */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--color-secundario);
+  height: 388px;
+  display: flex;
+  align-items: center;
+}
+.nuevos-ingresos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.nuevos-ingresos h2 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.nuevos-ingresos p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.nuevos-ingresos .boton {
+  margin-top: 2rem;
+  padding: 0.5rem 4.5rem;
+  background-color: white;
+  font-weight: 500;
+}
+.nuevos-ingresos .boton:hover {
+  background-color: var(--color-enfasis);
+  color: var(--color-secundario);
+}
+/* categorias */
+.categorias article {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoria-texto {
+  font-family: var(--font-secundaria);
+  margin-left: 65px;
+}
+.categoria-texto h3 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: uppercase;
+  margin: 11px 0px 15.81px 0px;
+}
+
+.categoria-texto p {
+  font-size: 24px;
+  line-height: 29.05px;
+  width: 570.1px;
+}
+.categoria-texto .coleccion {
+  font-size: 16px;
+  line-height: 19.36px;
+}
+.categoria-texto .numero {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 46px;
+  margin: 15.81px 0px 26.88px 0px;
+}
+.categoria-texto .importe {
+  margin-bottom: 26.88px;
+}
+.categoria-texto .importe .input {
+  width: 38.35px;
+  height: 32.49px;
+  text-align: center;
+  border: 0.5px solid #C9C9C9;
+  margin: 0px 12.84px 0px 12.84px;
+}
+.categoria-texto .importe .minPlus {
+  background-color:#4F4F4F;
+  color:#FFFFFF;
+  width: 38.35px;
+  height: 38.35px;
+}
+.categoria-texto .importe .agregar {
+  font-weight: 400;
+  font-size: 18px;
+  background-color:#FF3333;
+  color:#FFFFFF;
+  width: 181px;
+  height: 37.91px;
+  margin-left: 20px;
+}
+.categoria-texto .oferta {
+  color: var(--color-celeste);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+.categorias article a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 3.5rem;
+  background-color: #30343f;
+  font-weight: 500;
+  line-height: 29px;
+  color: white;
+}
+.categorias picture {
+  max-width: 600px;
+}
+
+.categorias article:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+/* productos relacionados */
+.productos-relacionados {
+  font-family: var(--font-secundaria);
+  padding-bottom: 2rem;
+}
+.productos-relacionados h2 {
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 54px;
+  margin-bottom: 1rem;
+}
+.productos-relacionados .contenedor-cards {
+  gap: 1rem;
+
+  justify-content: center;
+}
+.productos-relacionados .card {
+  display: block;
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.productos-relacionados .card:hover {
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.productos-relacionados .card .nuevo {
+  display: inline-block;
+  background-color: var(--color-enfasis);
+  color: white;
+  width: 96px;
+  font-size: 14px;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: -190%;
+  margin-left: 70%;
+}
+
+.productos-relacionados .card .coleccion {
+  font-size: 14px;
+  line-height: 17px;
+}
+.productos-relacionados .card .item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.productos-relacionados .card .precio {
+  font-size: 16px;
+  line-height: 20px;
+}
+.productos-relacionados .card .oferta {
+  color: var(--color-celeste);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* footer */
+footer {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-secundario);
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+footer picture {
+  width: 120px;
+}
+footer .rigths {
+  text-align: center; 
+}
+
+@media (min-width: 678px) {
+  .productos-relacionados .contenedor-cards {
+    display: flex;
+  }
+  .productos-relacionados .card .nuevo {
+    margin-left: 62%;
+  }
+}
+
+@media (min-width: 1080px) {
+  header,
+  section,
+  footer {
+    padding: 0 8rem;
+  }
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 104px;
+  }
+}
