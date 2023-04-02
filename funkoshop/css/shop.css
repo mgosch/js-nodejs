@@ -112,48 +112,14 @@ header .navegacion {
   justify-content: center;
 }
 
-/* banner */
-.banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url('../img/funkos-banner.webp');
-  /* le puse un gradiente oscuro al fondo para que el texto sea mas legible */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: var(--color-secundario);
-  height: 388px;
-  display: flex;
-  align-items: center;
+.main {
+  display: inline-flex;
+  margin-left: 110px;
 }
 
-.nuevos-ingresos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.nuevos-ingresos h2 {
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 45px;
-}
-
-.nuevos-ingresos p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.nuevos-ingresos .boton {
-  margin-top: 2rem;
-  padding: 0.5rem 4.5rem;
-  background-color: white;
-  font-weight: 500;
-}
-
-.nuevos-ingresos .boton:hover {
-  background-color: var(--color-enfasis);
-  color: var(--color-secundario);
+/* categorias */
+.buscador {
+  width: 280px;
 }
 
 /* categorias */
@@ -264,7 +230,6 @@ header .navegacion {
 
 .productos-relacionados .contenedor-cards {
   gap: 1rem;
-
   justify-content: center;
 }
 
@@ -354,7 +319,6 @@ footer .rigths {
 @media (min-width: 1080px) {
 
   header,
-  section,
   footer {
     padding: 0 8rem;
   }
